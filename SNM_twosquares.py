@@ -6,13 +6,13 @@ import os
 # Get current working directory
 current_dir = os.getcwd()
 # Define filename to be saved
-filename = 'SNM_analysis2.png'
-# Full pathq
+filename = '******.png'
+# Full path
 full_path = os.path.join(current_dir, filename)
 
 # 1. Read CSV files with headers, replace with your own files
-df1 = pd.read_csv('SNM_2.1.1.csv')  # First voltage sweep (VQ)
-df2 = pd.read_csv('SNM_2.2.csv')  # Second voltage sweep (VQB)
+df1 = pd.read_csv('******.csv')  # First voltage sweep (VQ)
+df2 = pd.read_csv('******.csv')  # Second voltage sweep (VQB)
 
 # 2. Extract data and column names
 x1, y1 = df1.iloc[:, 0].values, df1.iloc[:, 1].values  # VQ and VQB values from first sweep
@@ -26,7 +26,7 @@ B_points = np.column_stack((x2, y2))  # Points from second sweep
 # Split data into upper and lower loops using cutoff voltage
 
 # Change Voltage threshold of VQ for separating loops
-cutoff = 0.5
+cutoff = 0.5   ##### default value
 A_upper_loop = A_points[A_points[:, 0] > cutoff]  # Upper half of first sweep
 A_lower_loop = A_points[A_points[:, 0] <= cutoff]  # Lower half of first sweep
 B_upper_loop = B_points[B_points[:, 0] > cutoff]  # Upper half of second sweep

@@ -6,13 +6,13 @@ import os
 # Get current working directory
 current_dir = os.getcwd()
 # Define filename to be saved
-filename = 'SNM_analysis3.png'
+filename = '******.png'
 # Full path
 full_path = os.path.join(current_dir, filename)
 
 # 1. Read CSV files with headers, replace with your own files
-df1 = pd.read_csv('SNM3.3.1.csv')  # First voltage sweep (VQ)
-df2 = pd.read_csv('3.2.1.csv')  # Second voltage sweep (VQB)
+df1 = pd.read_csv('******.csv')  # First voltage sweep (VQ)
+df2 = pd.read_csv('******.csv')  # Second voltage sweep (VQB)
 
 # 2. Extract data and column names
 x1, y1 = df1.iloc[:, 0].values, df1.iloc[:, 1].values  # VQ and VQB values from first sweep
