@@ -6,28 +6,26 @@
 
 This Python-based tool provides visualization support for analog simulations by generating Voltage Transfer Characteristic (VTC) graphs and calculating Static Noise Margin (SNM) for SRAM cells.
 
-## 工作流程演示
 
-```mermaid
-graph LR
-  A[1. 初始化] --> B[2. 扫描]
-  B --> C[3. 采集]
-  C --> D[4. 计算]
-  D --> E[5. 可视化]
-```
-
-<div align="center">
-  <img src="./images/1.png" width="15%" title="1. 初始化">
-  <img src="./images/2.png" width="15%" title="2. 扫描"> 
-  <img src="./images/3.png" width="15%" title="3. 采集">
-  <img src="./images/4.png" width="15%" title="4. 计算">
-  <img src="./images/5.png" width="15%" title="5. 可视化">
+<div style="display: flex; flex-wrap: wrap; justify-content: center; gap: 20px;">
+  <div style="text-align: center;">
+    <p>1. Draw schematics </p>
+    <img src="./image/1.png" width="500" alt="">
+  </div>
+  <div style="text-align: center;">
+    <p>2. Dc Sweeping</p>
+    <img src="./image/2.png" width="700" alt="">
+  </div>
+  <div style="text-align: center;">
+    <p>3. Data collection</p>
+    <img src="./image/3.png" width="300" alt="">
+  </div>
+  <div style="text-align: center;">
+    <p>4. Processing and Ploting</p>
+    <img src="./image/4.png" width="500" alt="">
+  </div>
 </div>
 
-<div style="text-align: center; margin-top: 10px;">
-  <small>图：SRAM SNM分析五步工作流程</small>
-</div>
----
 
 ## Key Features
 
