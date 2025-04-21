@@ -6,13 +6,13 @@ import os
 # Get current working directory
 current_dir = os.getcwd()
 # Define filename to be saved
-filename = '******.png'
+filename = 'SNM_analysis.png'
 # Full path
 full_path = os.path.join(current_dir, filename)
 
 # 1. Read CSV files with headers, replace with your own files
-df1 = pd.read_csv('******.csv')  # First voltage sweep (VQ)
-df2 = pd.read_csv('******.csv')  # Second voltage sweep (VQB)
+df1 = pd.read_csv('SNM_1.2.csv')  # First voltage sweep (VQ)
+df2 = pd.read_csv('SNM_1.1.csv')  # Second voltage sweep (VQB)
 
 # 2. Extract data and column names
 x1, y1 = df1.iloc[:, 0].values, df1.iloc[:, 1].values  # VQ and VQB values from first sweep
@@ -22,6 +22,7 @@ x_label, y_label = df1.columns[0], df1.columns[1]  # Column headers
 # Combine coordinates into point arrays
 A_points = np.column_stack((x1, y1))  # Points from first sweep
 B_points = np.column_stack((x2, y2))  # Points from second sweep
+
 
 # Function to calculate perpendicular distance from point to line
 def point_to_line_distance(point, line_point, slope):
@@ -63,7 +64,7 @@ def find_max_distance_points(A_points, B_points, slope=1):
     return A_points[max_idx], nearest_B_points[max_idx]
 
 
-# Find vertices
+# Find vertices for upper and lower loops
 vertex_A, vertex_B = find_max_distance_points(A_points, B_points)
 
 # Data smoothing function
@@ -118,6 +119,7 @@ def plot_square(vertex_A, vertex_B):
     return square_length
 
 
+# Plot squares and calculate SNM
 SNM = plot_square(vertex_A, vertex_B)  # Static Noise Margin
 
 # Add SNM annotation
