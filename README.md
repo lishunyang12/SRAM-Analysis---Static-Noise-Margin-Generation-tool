@@ -22,7 +22,7 @@ This Python-based tool provides visualization support for analog simulations by 
   </div>
   <div style="text-align: center;">
     <p>4. Processing and Ploting</p>
-    <img src="./image/4.png" width="500" alt="">
+    <img src="./image/4.png" width="700" alt="">
   </div>
 </div>
 
