@@ -63,7 +63,7 @@ This Python-based tool provides visualization support for analog simulations by 
 
 ### 3. File Setup
 
-- Edit the input file paths in the Python script to point to your CSV files.
+- Edit the input file paths in the Python script to point to your CSV files. Notes: Q sweep one puts at the first one and QB sweep puts at the second one.
 - Specify your desired output filename.
 - **(For `SNM_twosquare.py` only)**: Set an appropriate cutoff voltage for loop separation.
 
